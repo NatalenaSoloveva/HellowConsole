@@ -34,17 +34,35 @@
 //1 -> нет
 
 
-Console.Write("Введи цифру, обозначающую день недели: ");
-int dayN = Convert.ToInt32(Console.ReadLine());
+//Console.Write("Введи цифру, обозначающую день недели: ");
+///int dayN = Convert.ToInt32(Console.ReadLine());
 
-void TheDayOfTheWeek (int dayN) {
-  if (dayN == 6 || dayN == 7) {
-  Console.WriteLine("(этот день выходной) -> да");
-  }
-  else if (dayN < 1 || dayN > 7) {
-    Console.WriteLine("это не день недели");
-  }
-  else Console.WriteLine("(этот день не выходной) -> нет");
+//void TheDayOfTheWeek (int dayN) {
+  //if (dayN == 6 || dayN == 7) {
+  //Console.WriteLine("(этот день выходной) -> да");
+  //}
+  //else if (dayN < 1 || dayN > 7) {
+    //Console.WriteLine("это не день недели");
+  //}
+  //else Console.WriteLine("(этот день не выходной) -> нет");
+//}
+
+T//heDayOfTheWeek(dayN);
+
+{
+Dictionary<int, string> eve = new Dictionary<int, string>()
+{
+  {1, "Понедельник, рабочий день"},
+  {2, "Вторник, рабочий день"},
+  {3, "Среда, рабочий день"},
+  {4, "Четверг, рабочий день"},
+  {5, "Пятница, рабочий день"},
+  {6, "Суббота, выходной день"},
+  {7, "Воскресенье, выходной день"},
 }
 
-TheDayOfTheWeek(dayN);
+int index = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(eve[index]);
+
+
+}
